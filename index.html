@@ -8,6 +8,7 @@
       body{
         background-color: #262626;
         font-family: Raleway, Arial, sans-serif;
+        margin: 0;
       }
       h{
         font-size: 20px;
@@ -24,14 +25,24 @@
         height: 200px;
         background-color: white;
       }
+      
+      #content{
+        display: block;
+        position: absolute;
+        width: 100%;
+        min-height: 200px;
+        overflow:hidden;
+        background-color: black;
+        margin-top:200px;
+      }
     </style>
   </head>
   <body>
     <div id="header">
+    </div>
+    <div id="content">
       <h> VERY TEXT YO</h>
       <p> BLYAT </p>
     </div>
-    <h> VERY TEXT YO</h>
-    <p> BLYAT </p>
   </body>
 </html>
