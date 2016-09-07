@@ -25,6 +25,9 @@
         outline: none;
         cursor: pointer;
         font-size: 40px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ie-user-select: none;
       }
       button:hover{
         background-color:#5590D4;
@@ -54,7 +57,6 @@
         var cocktailRaw = cocktails[Math.floor(Math.random()*cocktails.length)];
         var cocktailClean = cocktailRaw.replace(" (cocktail)","");
         document.getElementById("cocktailName").innerHTML=cocktailClean;
-        alert(cocktailRaw);
       }
     </script>
   </body>
