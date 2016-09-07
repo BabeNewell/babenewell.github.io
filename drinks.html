@@ -29,18 +29,32 @@
       button:hover{
         background-color:#5590D4;
       }
+      div{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        color:#ccc;
+        top: 2vw;
+      }
+      h{
+        font-size: 2vw;
+      }
     </style>
   </head>
   <body>
     <button id="randomize" type="button">Randomize!</button>
-    <div id="cocktailName"></div>
+    <div id="cocktailInfo">
+      <h id="cocktailName"></h>
+    </div>
     <script>
       var cocktails = ["Alexander (cocktail)","Americano (cocktail)","Angel Face (cocktail)","Aviation (cocktail)","Bacardi cocktail","Between the Sheets (cocktail)","Casino (cocktail)","Clover Club Cocktail","Daiquiri","Derby (cocktail)","Martini (cocktail)","Fizz (cocktail)","John Collins (cocktail)","Manhattan (cocktail)","Mary Pickford (cocktail)","Monkey Gland","Negroni","Old Fashioned","Paradise (cocktail)","Planter's Punch","Porto flip","Fizz (cocktail)","Rusty Nail (cocktail)","Sazerac","Screwdriver (cocktail)","Sidecar (cocktail)","Stinger (cocktail)","Tuxedo (cocktail)","Whiskey sour","Sour (cocktail)","Bellini (cocktail)","Black Russian","Bloody Mary (cocktail)","Caipirinha","Champagne Cocktail","Cosmopolitan (cocktail)","Cuba Libre","French 75 (cocktail)","French Connection (cocktail)","Godfather (cocktail)","Amaretto","Golden dream (cocktail)","Grasshopper (cocktail)","Harvey Wallbanger","Horse's Neck","Irish Coffee","Kir (cocktail)","Long Island Iced Tea","Mai Tai","Margarita","Mimosa (cocktail)","Mint Julep","Mojito","Moscow Mule","Piña Colada","Rose (cocktail)","Sea Breeze (cocktail)","Sex on the Beach","Singapore Sling","Tequila Sunrise (cocktail)","B-52 (cocktail)","Bramble (cocktail)","Dark 'N' Stormy","Martini (cocktail)","Espresso Martini","French Martini","Kamikaze (cocktail)","Lemon Drop Martini","Pisco sour","Spritz Veneziano","Margarita","Vesper (cocktail)","Yellow Bird (cocktail)"];
       document.getElementById("randomize").addEventListener("mousedown", randomize)
       
       function randomize(){
-        var cocktail = cocktails[Math.floor(Math.random()*cocktails.length)].replace(" (cocktail)","");
-        document.getElementById("cocktailName").innerHTML=cocktail;
+        var cocktailRaw = cocktails[Math.floor(Math.random()*cocktails.length)];
+        var cocktailClean = cocktailRaw.replace(" (cocktail)","");
+        document.getElementById("cocktailName").innerHTML=cocktailClean;
+        alert(cocktailRaw);
       }
     </script>
   </body>
